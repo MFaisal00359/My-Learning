@@ -7,6 +7,58 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# Learning-App
+
+Learning App adalah platform belajar bagi siswa di sekolah SMA dalam tugas kapita selekta untuk memenuhi indikator SDGs dalam hal pendidikan. Learning App berisi 3 komponen utama yaitu: 1. Informasi modul pembelajaran siswa yang dapat diakses dengan cepat di website Learning App; 2. Informasi beasiswa untuk siswa yang mencari tahu mengenai beasiswa; 3. Layanan pengaduan dan konseling melalui gform yang dapat diakses oleh siswa menggunakan email belajar siswa 
+
+## Daftar Isi
+
+- [Persyaratan](#persyaratan)
+- [Pengaturan Awal](#pengaturan-awal)
+- [Menjalankan Proyek](#menjalankan-proyek)
+- [Penggunaan](#penggunaan)
+- [Kontribusi](#kontribusi)
+- [Lisensi](#lisensi)
+
+## Persyaratan
+
+Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di komputer:
+
+- [PHP](https://www.php.net/)
+- [Composer](https://getcomposer.org/)
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
+- [Laravel](https://laravel.com/)
+
+## Pengaturan Awal
+
+1. **Klon Proyek**: clone repository ini : 
+
+   ```bash
+   git clone https://github.com/nama-user/nama-proyek.git
+   cd learning-app
+
+2. **Remote Proyek**: 
+    Lakukan remote repository menggunakan settingan vscode kalian masing"
+
+3. **Instal Dependensi dan menjalankan dependensi**:
+    Instal Dependensi untuk yang belum mengintall composer, node
+    ```bash
+    composer install
+
+    ```bash
+    npm install
+    
+    ```bash
+    php artisan serve
+
+    ```bash
+    php artisan serve
+
+    ```bash
+    npm run dev
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:

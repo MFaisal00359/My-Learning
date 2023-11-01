@@ -22,7 +22,7 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
 
 ## Pengaturan Awal
 
-1. **Klon Proyek**: clone repository ini : 
+1. **Clone Proyek**: clone repository ini : 
 
    ```bash
    git clone https://github.com/nama-user/nama-proyek.git
@@ -33,7 +33,11 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
 1. **Remote Proyek**: 
     Lakukan remote repository menggunakan settingan vscode kalian masing"
 
-2. **Instal Dependensi dan menjalankan dependensi**:
+2. **Jalankan XAMPP**
+   Centang Apache dan MySql di XAMPP kalian.
+   Kalo belum ada XAMPP, download dulu XAMPP nya
+
+3. **Instal Dependensi dan menjalankan dependensi**:
     Instal Dependensi untuk yang belum mengintall composer, node
     ```bash
     composer install
@@ -50,9 +54,6 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
     ```bash
     npm run dev
     ```
-3. **Jalankan XAMPP**
-   Centang Apache dan MySql di XAMPP kalian.
-   Kalo belum ada XAMPP, download dulu XAMPP nya
 
 ## Kontribusi
 -

@@ -30,11 +30,10 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
    ```
 
 ## Menjalankan Proyek
-
-2. **Remote Proyek**: 
+1. **Remote Proyek**: 
     Lakukan remote repository menggunakan settingan vscode kalian masing"
 
-3. **Instal Dependensi dan menjalankan dependensi**:
+2. **Instal Dependensi dan menjalankan dependensi**:
     Instal Dependensi untuk yang belum mengintall composer, node
     ```bash
     composer install
@@ -49,12 +48,11 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
     ```
 
     ```bash
-    php artisan serve
-    ```
-
-    ```bash
     npm run dev
     ```
+3. **Jalankan XAMPP**
+   Centang Apache dan MySql di XAMPP kalian.
+   Kalo belum ada XAMPP, download dulu XAMPP nya
 
 ## Kontribusi
 -

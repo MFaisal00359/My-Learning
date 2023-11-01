@@ -27,7 +27,7 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
    ```bash
    git clone https://github.com/nama-user/nama-proyek.git
    cd learning-app
-
+   ```
 
 ## Menjalankan Proyek
 
@@ -38,18 +38,23 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
     Instal Dependensi untuk yang belum mengintall composer, node
     ```bash
     composer install
-
+    ```
+    
     ```bash
     npm install
+    ```
     
     ```bash
     php artisan serve
+    ```
 
     ```bash
     php artisan serve
+    ```
 
     ```bash
     npm run dev
+    ```
 
 ## Kontribusi
 -

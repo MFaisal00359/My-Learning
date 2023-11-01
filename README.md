@@ -1,12 +1,3 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
 # Learning-App
 
 Learning App adalah platform belajar bagi siswa di sekolah SMA dalam tugas kapita selekta untuk memenuhi indikator SDGs dalam hal pendidikan. Learning App berisi 3 komponen utama yaitu: 1. Informasi modul pembelajaran siswa yang dapat diakses dengan cepat di website Learning App; 2. Informasi beasiswa untuk siswa yang mencari tahu mengenai beasiswa; 3. Layanan pengaduan dan konseling melalui gform yang dapat diakses oleh siswa menggunakan email belajar siswa 
@@ -16,7 +7,6 @@ Learning App adalah platform belajar bagi siswa di sekolah SMA dalam tugas kapit
 - [Persyaratan](#persyaratan)
 - [Pengaturan Awal](#pengaturan-awal)
 - [Menjalankan Proyek](#menjalankan-proyek)
-- [Penggunaan](#penggunaan)
 - [Kontribusi](#kontribusi)
 - [Lisensi](#lisensi)
 
@@ -38,6 +28,9 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
    git clone https://github.com/nama-user/nama-proyek.git
    cd learning-app
 
+
+## Menjalankan Proyek
+
 2. **Remote Proyek**: 
     Lakukan remote repository menggunakan settingan vscode kalian masing"
 
@@ -57,6 +50,21 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
 
     ```bash
     npm run dev
+
+## Kontribusi
+-
+
+## Lisensi
+MIT license
+
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
 
 ## About Laravel

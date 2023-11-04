@@ -18,7 +18,6 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
 - [Composer](https://getcomposer.org/)
 - [Node.js](https://nodejs.org/)
 - [npm](https://www.npmjs.com/)
-- [Laravel](https://laravel.com/)
 
 ## Pengaturan Awal
 

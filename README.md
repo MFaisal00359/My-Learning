@@ -1,6 +1,6 @@
 # Learning-App
 
-Learning App adalah platform belajar bagi siswa di sekolah SMA untuk memenuhi salah satu indikator SDGs dalam hal pendidikan dan tugas Kapita Selekta. Learning App berisi 3 komponen utama yaitu: 1. Informasi modul pembelajaran siswa yang dapat diakses dengan cepat di website Learning App; 2. Informasi beasiswa untuk siswa yang mencari tahu mengenai beasiswa; 3. Layanan pengaduan dan konseling melalui gform yang dapat diakses oleh siswa menggunakan email belajar siswa 
+Learning App adalah platform belajar bagi siswa di sekolah SMA Terkhusus nya SMA 1 Natar untuk memenuhi tugas kelompok kami yaitu salah satu indikator SDGs dalam hal pendidikan. Learning App berisi 3 komponen utama yaitu: 1. Informasi modul pembelajaran siswa yang dapat diakses dengan cepat di website Learning App; 2. Informasi beasiswa untuk siswa yang mencari tahu mengenai beasiswa; 3. Layanan pengaduan dan konseling melalui gform yang dapat diakses oleh siswa menggunakan email belajar siswa 
 
 ## Daftar Isi
 
@@ -18,7 +18,6 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
 - [Composer](https://getcomposer.org/)
 - [Node.js](https://nodejs.org/)
 - [npm](https://www.npmjs.com/)
-- [Laravel](https://laravel.com/)
 
 ## Pengaturan Awal
 
@@ -56,7 +55,12 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
     ```
 
 ## Kontribusi
--
+- Faisal
+- Kevin
+- Heni
+- Giovanni
+- Qaisya
+- Marsella
 
 ## Lisensi
 MIT license

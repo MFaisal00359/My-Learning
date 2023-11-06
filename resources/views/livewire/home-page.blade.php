@@ -11,7 +11,9 @@
         </div>
     </div>
 
-    <div class="flex justify-center gap-4 md:-mt-0 lg:-mt-44 place-content-center items-center px-12 ">
+
+    {{-- card wrapper --}}
+    <div class="flex lg:flex-nowrap sm:flex-wrap justify-center gap-4 md:-mt-0 lg:-mt-44 place-content-center items-center px-12 ">
         <!-- Pengaduan dan BK -->
         <div class="w-fit h-full bg-stone-50 rounded-lg z-20">
             <img class="w-[300px] h-[300px] mx-8 mt-8" src="https://via.placeholder.com/300x300" alt="Modul Pembelajaran Image">
@@ -40,6 +42,12 @@
                 <div class="bg-neutral-700 text-white px-4 py-2 rounded-lg text-base font-normal font-inter">Lihat Form</div>
                 <div class="w-5 h-5 ml-2 bg-neutral-700 relative"></div>
             </div>
+        </div>
+    </div>
+    {{-- news wrapper --}}
+    <div class="flex justify-center">
+        <div class="w-fit h-full bg-stone-50 rounded-lg z-20">
+            <img class="lg:w-[1020px] xl:w-full mt-12" src="https://via.placeholder.com/1060x300" alt="Modul Pembelajaran Image">
         </div>
     </div>
 

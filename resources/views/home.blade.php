@@ -14,7 +14,7 @@
 
         @livewireStyles
     </head>
-    <body class="antialiased px-12 py-12 bg-slate-50">
+    <body class="antialiased bg-slate-50">
         @livewire('layouts.navbars')
 
         @livewire('home-page')

@@ -20,6 +20,8 @@
         @livewire('home-page')
 
 
+        @livewire('layouts.footers')
+
         @livewireScripts
     </body>
 </html>

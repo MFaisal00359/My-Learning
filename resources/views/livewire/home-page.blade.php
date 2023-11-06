@@ -11,7 +11,7 @@
         </div>
     </div>
 
-    <div class="grid md:w-grid-cols-1 lg:grid-cols-3 lg:gap-4 md:-mt-0 lg:-mt-44 place-content-center items-center px-12 ">
+    <div class="flex justify-center gap-4 md:-mt-0 lg:-mt-44 place-content-center items-center px-12 ">
         <!-- Pengaduan dan BK -->
         <div class="w-fit h-full bg-stone-50 rounded-lg z-20">
             <img class="w-[300px] h-[300px] mx-8 mt-8" src="https://via.placeholder.com/300x300" alt="Modul Pembelajaran Image">

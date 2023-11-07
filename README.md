@@ -57,7 +57,7 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
 ## Kontribusi
 - Faisal
 - Kevin
-- Heni
+- Artha
 - Giovanni
 - Qaisya
 - Marsella

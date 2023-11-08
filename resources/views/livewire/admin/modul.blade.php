@@ -15,12 +15,6 @@
         @livewireStyles
     </head>
     <body class="antialiased bg-slate-50">
-        @livewire('layouts.navbars')
-
-        @livewire('home-page')
-
-        @livewire('layouts.footers')
-
-        @livewireScripts
+        ini admin
     </body>
 </html>

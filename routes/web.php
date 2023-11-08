@@ -17,22 +17,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/livewire', function () {
-    return view('home-page');
-});
-
-Route::get('/welcome', function () {
-    return view('welcome');
-});
-
-Route::get('/livewire/', function () {
-    return view('/livewire/home-page');
-});
-
-Route::get('/livewire/', function () {
-    return view('/livewire/informasi-beasiswa');
-});
-
-Route::get('/livewire/', function () {
-    return view('/livewire/home-page');
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+    Route::get('/dashboard', 'AdminController@dashboard')->name('admin.dashboard');
 });

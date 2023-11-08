@@ -11,7 +11,6 @@
         </div>
     </div>
 
-
     {{-- card wrapper --}}
     <div class="flex lg:flex-nowrap sm:flex-wrap justify-center gap-4 md:-mt-0 lg:-mt-44 place-content-center items-center px-12 ">
         <!-- Pengaduan dan BK -->

@@ -58,10 +58,6 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
     npm run dev
    ```
 
-    ```bash
-    npm run dev
-   ```
-
     kalau ada tulisan "'vite' is not recognized as an internal or external command, operable program or batch file."
     ```bash
     npm install

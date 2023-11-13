@@ -28,6 +28,45 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
    cd learning-app
    ```
 
+   untuk menjalankan local web, jalankan artisan laravel
+   ```bash
+   php artisan list
+   ```
+   
+   kalau gagal coba 
+   ```bash
+   composer update
+   ```
+   
+    kalau gagal coba "
+   ```bash
+   composer update --ignore-platform-reqs
+   ```
+
+   cek lagi    
+   ```bash
+   php artisan list
+   ```
+
+   coba jalankan
+   ```bash
+   php artisan serve
+   ```
+
+    jalankan run dev untuk load tailwind
+    ```bash
+    npm run dev
+   ```
+
+    ```bash
+    npm run dev
+   ```
+
+    kalau ada tulisan "'vite' is not recognized as an internal or external command, operable program or batch file."
+    ```bash
+    npm install
+    ```
+
 ## Menjalankan Proyek
 1. **Remote Proyek**: 
     Lakukan remote repository menggunakan settingan vscode kalian masing"

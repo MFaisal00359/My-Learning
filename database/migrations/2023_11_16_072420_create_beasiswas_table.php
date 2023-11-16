@@ -12,11 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('beasiswas', function (Blueprint $table) {
-            $table->int('id_link');
+            $table->id('id_link');
             $table->string('img_path');
+            $table->dateTime('tgl_buka');
+            $table->dateTime('tgl_tutup');
             $table->string('link');
             $table->int('link_status');
             $table->int('author_id');
+
+            $table->foreign('author_id')->references('id')->on('users');
         });
     }
 

@@ -10,4 +10,8 @@ class beasiswa extends Model
     use HasFactory;
 
     protected $primaryKey = 'id_link';
+
+    public function user(){
+        return $this-> belongsTo(User::class, 'author_id');
+    }
 }

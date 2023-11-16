@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
 
-     protected $primaryKey = 'id';
+    protected $primaryKey = 'id';
 
     protected $fillable = [
         'name',
@@ -45,4 +45,24 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function beasiswa(){
+        return $this-> hasMany(beasiswa::class, 'author_id');
+    }
+
+    public function matpel(){
+        return $this-> hasMany(mata_pelajaran::class, 'id_pengampu');
+    }
+
+    public function modul(){
+        return $this-> hasMany(modul::class, 'author_id');
+    }
+
+    public function tes_kepribadian(){
+        return $this-> hasMany(tes_kepribadian::class, 'author_id');
+    }
+
+    public function action_log(){
+        return $this-> hasMany(action_log::class, 'author_id');
+    }
 }

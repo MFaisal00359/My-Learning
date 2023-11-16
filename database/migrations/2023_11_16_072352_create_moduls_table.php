@@ -12,14 +12,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('moduls', function (Blueprint $table) {
-            $table->int('id_modul');
+            $table->id('id_modul');
             $table->int('pertemuan');
             $table->string('judul');
-            $table->int('fk_id_matpel');
+            $table->int('id_matpel');
             $table->int('kelas');
             $table->string('tipe');
             $table->string('file_path');
             $table->int('author_id');
+
+            $table->foreign('id_matpel')->references('id_matpel')->on('mata_pelajarans');
+            $table->foreign('author_id')->references('id')->on('users');
         });
     }
 

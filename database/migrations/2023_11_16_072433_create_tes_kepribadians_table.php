@@ -12,11 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tes_kepribadians', function (Blueprint $table) {
-            $table->int('id_link');
+            $table->id('id_link');
             $table->string('img_path');
             $table->string('link');
             $table->int('link_status');
             $table->int('author_id');
+
+            $table->foreign('author_id')->references('id')->on('users');
         });
     }
 

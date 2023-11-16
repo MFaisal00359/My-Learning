@@ -13,10 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
+Route::get('/', [LandingController::class, 'index']);
+
+// Admin Routes
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('admin/beasiswa', AdminBeasiswa::class)->name('admin.beasiswa');
+    Route::get('admin/konseling', AdminKonseling::class)->name('admin.konseling');
+    Route::get('admin/modul', GuruModul::class)->name('admin.modul');
 });
 
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
-    Route::get('/dashboard', 'AdminController@dashboard')->name('admin.dashboard');
+// Guru Routes
+Route::middleware(['auth', 'guru'])->group(function () {
+    Route::get('guru/modul', GuruModul::class)->name('guru.modul');
 });
+
+// Siswa Routes
+Route::middleware(['auth', 'siswa'])->group(function () {
+    Route::get('siswa/landing', SiswaLanding::class)->name('siswa.landing');
+});
+

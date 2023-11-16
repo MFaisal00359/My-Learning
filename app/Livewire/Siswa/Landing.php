@@ -4,10 +4,10 @@ namespace App\Livewire\Siswa;
 
 use Livewire\Component;
 
-class Home extends Component
+class Landing extends Component
 {
     public function render()
     {
-        return view('livewire.siswa.home');
+        return view('livewire.siswa.landing');
     }
 }

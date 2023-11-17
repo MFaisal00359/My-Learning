@@ -22,41 +22,17 @@ use Illuminate\Support\Facades\Route;
 // use App\Http\Livewire\Siswa\Landing as SiswaLanding;
 
 route::get('/', function(){
-    return view('home');
+    return view('welcome');
 });
 
-// Route::get('/', [LandingController::class, 'index']);
-
-// Admin Routes
-// Route::middleware(['auth', 'admin'])->group(function () {
-//     Route::get('admin/beasiswa', function () {
-//         return view('livewire.admin.beasiswa');
-//     })->name('admin.beasiswa');
-
-//     Route::get('admin/konseling', function () {
-//         return view('livewire.admin.konseling');
-//     })->name('admin.konseling');
-
-//     Route::get('admin/modul', function () {
-//         return view('livewire.admin.modul');
-//     })->name('admin.modul');
-// });
-
-// Guru Routes
-// Route::middleware(['auth', 'guru'])->group(function () {
-//     Route::get('guru/modul', function () {
-//         return view('livewire.guru.modul');
-//     })->name('guru.modul');
-// });
-
-// Siswa Routes
-// Route::middleware(['auth', 'siswa'])->group(function () {
-//     Route::get('siswa/landing', function () {
-//         return view('livewire.siswa.landing');
-//     })->name('siswa.landing');
-// });
-
-// Add Livewire Routes if needed
-
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
 
 

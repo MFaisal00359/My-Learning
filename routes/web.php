@@ -33,6 +33,8 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    // Route::get('/beasiswa', Beasiswa::class)->class('admin.beasiswa');
 });
 
 

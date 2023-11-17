@@ -38,14 +38,18 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
    composer update
    ```
    
-    kalau gagal coba "
+   jika error saat update composer (kalau nggak skip bagian ini). coba ketik pada teminal "
    ```bash
    composer update --ignore-platform-reqs
    ```
 
-   cek lagi    
+   cek lagi (opsi jika tadi update composer gagal)    
    ```bash
    php artisan list
+   ```
+   kalau lanjut migrate dulu untuk create db ny. ketik dibawah ini
+   ```bash
+   php artisan migrate
    ```
 
    coba jalankan
@@ -53,12 +57,12 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
    php artisan serve
    ```
 
-    jalankan run dev untuk load tailwind
+    jalankan run dev untuk load tailwind (ganti terminal)
     ```bash
     npm run dev
    ```
 
-    kalau ada tulisan "'vite' is not recognized as an internal or external command, operable program or batch file."
+    kalau ada tulisan "'vite' is not recognized as an internal or external command, operable program or batch file." lalu run dev lagi
     ```bash
     npm install
     ```

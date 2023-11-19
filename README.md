@@ -28,9 +28,9 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
    cd learning-app
    ```
 
-   untuk menjalankan local web, jalankan artisan laravel
+   copy env
    ```bash
-   php artisan list
+   cp .env.example .env
    ```
    
    kalau gagal coba 
@@ -50,6 +50,11 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
    kalau lanjut migrate dulu untuk create db ny. ketik dibawah ini
    ```bash
    php artisan migrate
+   ```
+   
+   defenisiin admin role ke db nya 
+   ```bash
+   php artisan db:seed --class=AdminUserSeeder
    ```
 
    coba jalankan

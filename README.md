@@ -33,7 +33,7 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
    ```
    Install Composer
    ```bash
-   npm install
+   composer install
    ```
 
    Install npm

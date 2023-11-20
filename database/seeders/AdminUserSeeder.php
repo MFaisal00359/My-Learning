@@ -13,7 +13,7 @@ class AdminUserSeeder extends Seeder
     public function run()
     {
         $adminRole = Role::create(['name' => 'admin']);
-        $permission = Permission::create(['name' => 'manage tasks']);
+        $permission = Permission::create(['name' => 'manage access']);
         $permission->assignRole($adminRole);
 
         $admin = User::factory()->create([

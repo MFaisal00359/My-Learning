@@ -10,8 +10,8 @@ class Modul extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
-        'description',
-        'file_path',
+        'nama_modul',
+        'deskripsi_modul',
+        'filePath_modul',
     ];
 }

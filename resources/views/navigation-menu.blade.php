@@ -16,7 +16,10 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link href="{{ route('moduls.index') }}" :active="request()->routeIs('moduls.*')">
-                        {{ __('Moduls') }}
+                        {{ __('Modul Pembelajaran') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('beasiswa_links.index') }}" :active="request()->routeIs('beasiswa_links.*')">
+                        {{ __('Beasiswa') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -147,7 +150,11 @@
             </x-responsive-nav-link>
 
             <x-responsive-nav-link href="{{ route('moduls.index') }}" :active="request()->routeIs('moduls.*')">
-                {{ __('Moduls') }}
+                {{ __('Modul Pembelajaran') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link href="{{ route('beasiswa_links.index') }}" :active="request()->routeIs('beasiswa_links.*')">
+                {{ __('Beasiswa') }}
             </x-responsive-nav-link>
         </div>
 

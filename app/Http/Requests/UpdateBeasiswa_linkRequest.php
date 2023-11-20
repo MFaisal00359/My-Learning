@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateModulRequest extends FormRequest
+class UpdateBeasiswa_linkRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,9 +22,9 @@ class UpdateModulRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nama_modul' => 'required',
-            'deskripsi_modul' => 'required',
-            'filePath_modul' => 'required',
+            'nama_beasiswa' => 'required',
+            'foto_beasiswa' => 'required',
+            'link_beasiswa' => 'required',
         ];
     }
 }

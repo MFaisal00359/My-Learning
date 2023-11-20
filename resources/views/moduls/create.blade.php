@@ -12,28 +12,28 @@
 
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg px-4 py-4">
                     <x-validation-errors class="mb-4" />
-                    <x-link-back-moduls href="{{ route('moduls.index') }}" class="mb-4">Back to Moduls</x-link-back-moduls>
+                    <x-link-back href="{{ route('moduls.index') }}" class="mb-4">Kembali Ke Modul</x-link-back>
                     <form method="POST" action="{{ route('moduls.store') }}">
                         @csrf
 
                         <div class="mb-4">
-                            <x-label for="name" value="{{ __('Name Modul') }}" />
-                            <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                            <x-label for="nama_modul" value="{{ __('Nama Modul') }}" />
+                            <x-input id="nama_modul" class="block mt-1 w-full" type="text" name="nama_modul" :value="old('nama_modul')" required autofocus autocomplete="nama_modul" />
                         </div>
 
                         <div class="mb-4">
-                            <x-label for="description" value="{{ __('description') }}" />
-                            <x-input id="description" class="block mt-1 w-full" type="text" name="description" :value="old('description')" required autofocus autocomplete="description" />
+                            <x-label for="deskripsi_modul" value="{{ __('Deskripsi Modul') }}" />
+                            <x-input id="deskripsi_modul" class="block mt-1 w-full" type="text" name="deskripsi_modul" :value="old('deskripsi_modul')" required autofocus autocomplete="deskripsi_modul" />
                         </div>
 
                         <div class="mb-4">
-                            <x-label for="file_path" value="{{ __('file path') }}" />
-                            <x-input id="file_path" class="block mt-1 w-full" type="text" name="file_path" :value="old('file_path')" required autofocus autocomplete="file_path" />
+                            <x-label for="filePath_modul" value="{{ __('File Modul') }}" />
+                            <x-input id="filePath_modul" class="block mt-1 w-full" type="text" name="filePath_modul" :value="old('filePath_modul')" required autofocus autocomplete="filePath_modul" />
                         </div>
 
                         <div class="flex mt-4">
                             <x-button>
-                                {{ __('Create Modul') }}
+                                {{ __('Tambahkan Modul') }}
                             </x-button>
                         </div>
                 </div>

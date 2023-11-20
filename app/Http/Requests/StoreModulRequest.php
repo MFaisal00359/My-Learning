@@ -22,9 +22,9 @@ class StoreModulRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required',
-            'description' => 'required',
-            'file_path' => 'required',
+            'nama_modul' => 'required',
+            'deskripsi_modul' => 'required',
+            'filePath_modul' => 'required',
         ];
     }
 }

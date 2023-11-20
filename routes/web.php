@@ -27,6 +27,7 @@ Route::middleware([
     })->name('dashboard');
 
     Route::resource('moduls', \App\Http\Controllers\ModulController::class);
+    Route::resource('beasiswa_links', \App\Http\Controllers\BeasiswaLinkController::class);
 });
 
 

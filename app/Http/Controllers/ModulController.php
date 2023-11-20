@@ -23,7 +23,7 @@ class ModulController extends Controller
      */
     public function create()
     {
-        $this->authorize('manage tasks');
+        $this->authorize('manage access');
 
         return view('moduls.create');
     }
@@ -33,7 +33,7 @@ class ModulController extends Controller
      */
     public function store(StoreModulRequest $request)
     {
-        $this->authorize('manage tasks');
+        $this->authorize('manage access');
 
         Modul::create($request->validated());
 
@@ -53,7 +53,7 @@ class ModulController extends Controller
      */
     public function edit(Modul $modul)
     {
-        $this->authorize('manage tasks');
+        $this->authorize('manage access');
 
         return view('moduls.edit', compact('modul'));
     }
@@ -63,7 +63,7 @@ class ModulController extends Controller
      */
     public function update(UpdateModulRequest $request, Modul $modul)
     {
-        $this->authorize('manage tasks');
+        $this->authorize('manage access');
 
         $modul->update($request->validated());
 
@@ -75,7 +75,7 @@ class ModulController extends Controller
      */
     public function destroy(Modul $modul)
     {
-        $this->authorize('manage tasks');
+        $this->authorize('manage access');
 
         $modul->delete();
 

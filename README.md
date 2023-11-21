@@ -13,13 +13,12 @@ My Learning adalah platform belajar bagi siswa di sekolah SMA Terkhusus nya SMA 
 ## Persyaratan
 
 Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di komputer:
-
 - [PHP](https://www.php.net/)
 - [Composer](https://getcomposer.org/)
 - [Node.js](https://nodejs.org/)
 - [npm](https://www.npmjs.com/)
 
-## Pengaturan Awal
+## Menjalankan Program
 
 1. **Clone Proyek**: clone repository ini : 
 
@@ -31,6 +30,15 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
    copy env
    ```bash
    cp .env.example .env
+   ```
+   Install Composer
+   ```bash
+   composer install
+   ```
+
+   Install npm
+   ```bash
+   npm install
    ```
    
    kalau gagal coba 
@@ -47,6 +55,7 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
    ```bash
    php artisan list
    ```
+
    kalau lanjut migrate dulu untuk create db ny. ketik dibawah ini
    ```bash
    php artisan migrate
@@ -62,42 +71,11 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
    php artisan serve
    ```
 
-    jalankan run dev untuk load tailwind (ganti terminal)
-    ```bash
-    npm run dev
+   jalankan run dev untuk load tailwind (ganti terminal)
+   ```bash
+   npm run dev
    ```
-
-    kalau ada tulisan "'vite' is not recognized as an internal or external command, operable program or batch file." lalu run dev lagi
-    ```bash
-    npm install
-    ```
-
-## Menjalankan Proyek
-1. **Remote Proyek**: 
-    Lakukan remote repository menggunakan settingan vscode kalian masing"
-
-2. **Jalankan XAMPP**
-   Centang Apache dan MySql di XAMPP kalian.
-   Kalo belum ada XAMPP, download dulu XAMPP nya
-
-3. **Instal Dependensi dan menjalankan dependensi**:
-    Instal Dependensi untuk yang belum mengintall composer, node
-    ```bash
-    composer install
-    ```
     
-    ```bash
-    npm install
-    ```
-    
-    ```bash
-    php artisan serve
-    ```
-
-    ```bash
-    npm run dev
-    ```
-
 ## Kontribusi
 - Faisal
 - Kevin

@@ -130,6 +130,22 @@
                         </div>
                     </div>
 
+                    <article class="p-10 min-h-96 w-full bg-blue-400 rounded-xl text-gray-100 xl:col-span-2 transform duration-500 hover:-translate-y-1 cursor-pointer">
+                        <h1 class="mt-5 text-5xl font-light text-gray-100 leading-snug min-h-33">
+                            One small step for man one giant leap for mankind
+                        </h1>
+                        <div class="mt-20">
+                            <span class="text-xl">Moonlanding - </span>
+                            <span class="font-bold text-xl">Neil Armstrong</span>
+                        </div>
+                        <div class="mt-16 flex justify-between ">
+                            <span class="p-3 pl-0 font-bold">Quotes</span>
+                            <span class="p-3 border-2 border-gray-200 rounded-xl text-base hover:bg-gray-200 hover:border-gray-200 cursor-pointer hover:text-black ">Paid
+                                Membership
+                            </span>
+                        </div>
+                    </article>
+
                     <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                     </div>

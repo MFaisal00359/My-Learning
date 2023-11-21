@@ -33,16 +33,16 @@
                     <tbody>
                     @forelse ($moduls as $modul)
                         <tr class="bg-white border-b hover:bg-gray-50">
-                            <th class="px-6 py-4 font-medium text-gray-800 whitespace-nowrap">
+                            <th class="px-6 py-4 text-gray-800 whitespace-nowrap">
                                 {{ $modul->nama_modul }}
                             </th>
-                            <th class="px-6 py-4">
+                            <th class="px-6 py-4 lowercase ">
                                 {{ $modul->filePath_modul }}
                             </th>
                             @can('manage access')
                             <th class="py-4 whitespace-nowrap">
                                 {{-- BUTTON EDIT --}}
-                                <x-link href="{{ route('moduls.edit', $modul) }}">Edit</x-link>
+                                <x-link-add href="{{ route('moduls.edit', $modul) }}">Edit</x-link-add>
 
                                 {{-- BUTTON DELETE --}}
                                 <form method="POST" action="{{ route('moduls.destroy', $modul) }}" class="inline-block">

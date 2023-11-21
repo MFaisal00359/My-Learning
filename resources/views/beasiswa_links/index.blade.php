@@ -42,7 +42,7 @@
                             @can('manage access')
                             <td class="py-4 whitespace-nowrap">
                                 {{-- BUTTON EDIT --}}
-                                <x-link href="{{ route('beasiswa_links.edit', $beasiswa_link) }}">Edit</x-link>
+                                <x-link-add href="{{ route('beasiswa_links.edit', $beasiswa_link) }}">Edit</x-link-add>
 
                                 {{-- BUTTON DELETE --}}
                                 <form method="POST" action="{{ route('beasiswa_links.destroy', $beasiswa_link) }}" class="inline-block">

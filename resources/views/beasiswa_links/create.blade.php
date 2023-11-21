@@ -19,22 +19,25 @@
                         <div class="mb-4">
                             <x-label for="nama_beasiswa" value="{{ __('Judul Beasiswa') }}" />
                             <x-input id="nama_beasiswa" class="block mt-1 w-full" type="text" name="nama_beasiswa" :value="old('nama_beasiswa')" required autofocus autocomplete="nama_beasiswa" />
+                            <x-input-error for="nama_beasiswa" class="mt-2"/>
                         </div>
 
                         <div class="mb-4">
                             <x-label for="foto_beasiswa" value="{{ __('Foto Beasiswa') }}" />
                             <x-input id="foto_beasiswa" class="block mt-1 w-full" type="text" name="foto_beasiswa" :value="old('foto_beasiswa')" required autofocus autocomplete="foto_beasiswa" />
+                            <x-input-error for="foto_beasiswa" class="mt-2"/>
                         </div>
 
                         <div class="mb-4">
                             <x-label for="link_beasiswa" value="{{ __('Link Beasiswa') }}" />
                             <x-input id="link_beasiswa" class="block mt-1 w-full" type="text" name="link_beasiswa" :value="old('link_beasiswa')" required autofocus autocomplete="link_beasiswa" />
+                            <x-input-error for="link_beasiswa" class="mt-2"/>
                         </div>
 
                         <div class="flex mt-4">
-                            <x-button>
-                                {{ __('Tambahkan Beasiswa Baru') }}
-                            </x-button>
+                            <x-button-save>
+                                {{ __('Tambah') }}
+                            </x-button-save>
                         </div>
                 </div>
             </div>

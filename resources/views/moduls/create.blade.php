@@ -19,22 +19,25 @@
                         <div class="mb-4">
                             <x-label for="nama_modul" value="{{ __('Nama Modul') }}" />
                             <x-input id="nama_modul" class="block mt-1 w-full" type="text" name="nama_modul" :value="old('nama_modul')" required autofocus autocomplete="nama_modul" />
+                            <x-input-error for="nama_modul" class="mt-2"/>
                         </div>
 
                         <div class="mb-4">
                             <x-label for="deskripsi_modul" value="{{ __('Deskripsi Modul') }}" />
                             <x-input id="deskripsi_modul" class="block mt-1 w-full" type="text" name="deskripsi_modul" :value="old('deskripsi_modul')" required autofocus autocomplete="deskripsi_modul" />
+                            <x-input-error for="deskripsi_modul" class="mt-2"/>
                         </div>
 
                         <div class="mb-4">
                             <x-label for="filePath_modul" value="{{ __('File Modul') }}" />
                             <x-input id="filePath_modul" class="block mt-1 w-full" type="text" name="filePath_modul" :value="old('filePath_modul')" required autofocus autocomplete="filePath_modul" />
+                            <x-input-error for="filePath_modul" class="mt-2"/>
                         </div>
 
                         <div class="flex mt-4">
-                            <x-button>
+                            <x-button-save>
                                 {{ __('Tambahkan Modul') }}
-                            </x-button>
+                            </x-button-save>
                         </div>
                 </div>
             </div>

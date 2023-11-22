@@ -24,6 +24,8 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
 
    ```bash
    git clone https://github.com/nama-user/nama-proyek.git
+   ```
+   ```bash
    cd learning-app
    ```
 

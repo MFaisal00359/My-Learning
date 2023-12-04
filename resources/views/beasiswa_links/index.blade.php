@@ -17,11 +17,11 @@
                 <table class="w-full text-sm text-left rtl:text-right">
                     <thead class="text-xs text-white uppercase bg-slate-800">
                         <tr>
-                            <th scope="col" class="px-6 py-6">
-                                Nama Beasiswa
-                            </th>
                             <th scope="col" class="px-6 py-3">
                                 Foto Beasiswa
+                            </th>
+                            <th scope="col" class="px-6 py-6">
+                                Nama Beasiswa
                             </th>
                             <th scope="col" class="px-6 py-6">
                                 Link Beasiswa
@@ -36,11 +36,11 @@
                     <tbody>
                     @forelse ($beasiswa_links as $beasiswa_link)
                         <tr class="bg-white border-b hover:bg-gray-50">
-                            <td class="px-6 py-4 font-medium text-gray-800 whitespace-nowrap">
-                                {{ $beasiswa_link->nama_beasiswa }}
-                            </td>
                             <td class="px-6 py-4">
                                 <img class="w-[84px]" src="{{ asset('storage/images/'.$beasiswa_link->foto_beasiswa) }}" alt="Beasiswa Image"/>
+                            </td>
+                            <td class="px-6 py-4 font-medium text-gray-800 whitespace-nowrap">
+                                {{ $beasiswa_link->nama_beasiswa }}
                             </td>
                             <td class="px-6 py-4">
                                 {{ $beasiswa_link->link_beasiswa }}

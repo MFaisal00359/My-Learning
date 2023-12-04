@@ -19,8 +19,8 @@
                         </h5>
                     </div>
                     <div class="p-6 pt-0 text-center">
-                        <x-link-to href="{{ url('/moduls') }}">
-                            Lihat Modul Pembelajaran
+                        <x-link-to href="{{ route('moduls.modul_11.index') }}">
+                            KELAS 10
                         </x-link-to>
                     </div>
                 </article>

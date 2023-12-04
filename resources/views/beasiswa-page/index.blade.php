@@ -13,7 +13,7 @@
                     </a>
                 </li>
                 <li class="block p-1 font-sans text-md font-normal leading-normal text-inherit antialiased">
-                    <a class="hover:underline hover:text-blue-700" href="{{ url('/modul-page') }}">
+                    <a class="hover:underline hover:text-blue-700" href="{{ url('/moduls') }}">
                         Modul Belajar
                     </a>
                 </li>
@@ -55,7 +55,7 @@
                     </a>
                 </li>
                 <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
-                    <a class="hover:underline hover:text-blue-700" href="{{ url('/modul-page') }}">
+                    <a class="hover:underline hover:text-blue-700" href="{{ url('/moduls_page') }}">
                         Modul Belajar
                     </a>
                 </li>
@@ -85,14 +85,16 @@
                     <img class="w-[300px]" src="{{ asset('storage/images/'.$beasiswa_link->foto_beasiswa) }}" alt="Beasiswa Image"/>
                 </div>
                 <div class="p-6 text-center">
-                    <h5 class="block mb-2 font-sans text-xl md:text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                    <h4 class="block mb-2 font-sans text-xl md:text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                         {{ $beasiswa_link->nama_beasiswa }}
-                    </h5>
+                    </h4>
                 </div>
                 <div class="p-6 pt-0 text-center">
-                    <a class="text-blue-600" href="{{ $beasiswa_link->link_beasiswa }}">
-                        Lihat Beasiswa
-                    </a>
+                    <h5>
+                        <a class="text-blue-600" href="{{ $beasiswa_link->link_beasiswa }}" target="_blank">
+                            Lihat Beasiswa
+                        </a>
+                    </h5>
                 </div>
             </article>
             @empty

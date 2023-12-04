@@ -11,7 +11,7 @@ class UpdateModul_11Request extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,9 @@ class UpdateModul_11Request extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'judul_modul_11' => 'required|max:200|min:5',
+            'foto_modul_11' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'link_modul_11' => 'required',
         ];
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Modul_11;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\StoreModul_11Request;
 use App\Http\Requests\UpdateModul_11Request;
 
@@ -67,7 +68,7 @@ class Modul11Controller extends Controller
     {
         $this->authorize('manage access');
 
-        return view('moduls.modul_11.index', compact('moduls_11'));
+        return view('moduls.modul_11.edit', compact('modul_11'));
     }
 
     /**
@@ -79,7 +80,7 @@ class Modul11Controller extends Controller
 
         if ($request->hasFile('foto_modul_11')) {
             // Delete the old image
-            Storage::delete('public/images/' . $moduls_11->foto_modul_11);
+            Storage::delete('public/images/' . $modul_11->foto_modul_11);
 
             // Save the new image
             $destination_path = 'public/images';
@@ -88,7 +89,7 @@ class Modul11Controller extends Controller
             $image->storeAs($destination_path, $imageName);
         }
 
-        $moduls_11->update(array_merge($request->validated(), ['foto_modul_11' => $imageName]));
+        $modul_11->update(array_merge($request->validated(), ['foto_modul_11' => $imageName]));
 
         return redirect()->route('moduls.modul_11.index')->with([
             'message' => 'User added successfully!',
@@ -104,10 +105,10 @@ class Modul11Controller extends Controller
         $this->authorize('manage access');
 
         // Delete the associated image file
-        Storage::delete('public/images/' . $moduls_11->foto_modul_11);
+        Storage::delete('public/images/' . $modul_11->foto_modul_11);
 
         // Delete the moduls_11 record
-        $moduls_11->delete();
+        $modul_11->delete();
 
         return redirect()->route('moduls.modul_11.index');
     }

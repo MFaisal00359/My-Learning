@@ -1,4 +1,4 @@
-<div class="py-12">
+<x-guest-layout>
     {{-- NAVBAR --}}
     <nav class="sticky inset-0 z-10 block h-max w-full max-w-full rounded-none border border-white/80 bg-white bg-opacity-80 py-2 px-4 sm:px-12 md:24 lg:32 text-white shadow-md backdrop-blur-2xl backdrop-saturate-200 lg:px-8 lg:py-4">
         <div class="flex flex-wrap items-center text-gray-900">
@@ -7,33 +7,27 @@
                 <span class="px-4">My Learning</span>
             </a>
             <ul class="ml-auto mr-8 hidden items-center gap-6 lg:flex">
-                <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
-                    <a class="flex items-center" href="{{ url('/') }}">
+                <li class="block p-1 font-sans text-md font-normal leading-normal text-inherit antialiased">
+                    <a class="hover:underline hover:text-blue-700" href="{{ url('/') }}">
                         Home
                     </a>
                 </li>
-                <li class="block p-1 font-sans text-sm\ font-normal leading-normal text-inherit antialiased">
-                    <a class="flex items-center" href="{{ url('/modul-page') }}">
+                <li class="block p-1 font-sans text-md font-normal leading-normal text-inherit antialiased">
+                    <a class="hover:underline hover:text-blue-700" href="{{ url('/moduls_page') }}">
                         Modul Belajar
                     </a>
                 </li>
-                <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
-                    <a class="flex items-center" href="#">
+                <li class="block p-1 font-sans text-md font-normal leading-normal text-inherit antialiased">
+                    <a class="hover:underline hover:text-blue-700" href="{{ url('/beasiswa-page') }}">
                         Info Beasiswa
                     </a>
                 </li>
-                <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
-                    <a class="flex items-center" href="#">
-                        Layanan Konseling
+                <li class="block p-1 font-sans text-md font-normal leading-normal text-inherit antialiased">
+                    <a class="hover:underline hover:text-blue-700" href="{{ url('/konseling-page') }}">
+                        Konseling
                     </a>
                 </li>
             </ul>
-            <button
-                class="middle none center hidden rounded-lg bg-gradient-to-tr from-pink-600 to-pink-400 py-2 px-4 font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
-                type="button"
-                data-ripple-light="true">
-                <span>Login</span>
-            </button>
             <button
                 class="middle none relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] rounded-lg text-center font-sans text-xs font-medium uppercase text-blue-gray-500 transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
                 data-collapse-target="sticky-navar">
@@ -56,23 +50,23 @@
         <div class="block h-0 w-full basis-full overflow-hidden text-blue-gray-900 transition-all duration-300 ease-in lg:hidden" data-collapse="sticky-navar">
             <ul class="mt-2 mb-4 flex flex-col gap-2 pb-2">
                 <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
-                    <x-link-to href="{{ url('welcome') }}">
+                    <a class="hover:underline hover:text-blue-700" href="{{ url('welcome') }}">
                         Home
-                    </x-link-to>
-                </li>
-                <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
-                    <x-link-to href="{{ url('modul-page') }}">
-                        Modul Belajar
-                    </x-link-to>
-                </li>
-                <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
-                    <a class="flex items-center" href="#">
-                        Info-Beasiswa
                     </a>
                 </li>
                 <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
-                    <a class="flex items-center" href="#">
-                        Layanan Konseling
+                    <a class="hover:underline hover:text-blue-700" href="{{ url('/moduls_page') }}">
+                        Modul Belajar
+                    </a>
+                </li>
+                <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
+                    <a class="hover:underline hover:text-blue-700" href="{{ url('/beasiswa-page') }}">
+                        Info Beasiswa
+                    </a>
+                </li>
+                <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
+                    <a class="hover:underline hover:text-blue-700" href="{{ url('/konseling-page') }}">
+                        Konseling
                     </a>
                 </li>
 
@@ -80,21 +74,37 @@
         </div>
     </nav>
 
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        {{-- Board Moduls List --}}
+    <section class="relative container mx-auto p-4 sm:py-20 px-0 md:p-10 md:px-0 bg-white selection:bg-red-500 selection:text-white">
+        {{-- SECTION CARDS --}}
+        <section class="p-5 md:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 place-content-center place-items-right">
 
-        @foreach($moduls as $modul)
-            <tr class="bg-white border-b hover:bg-gray-50">
-                <td class="px-6 py-4 text-gray-800 whitespace-nowrap">
-                    <a href="{{ route('modul-page.show', ['modul' => $modul]) }}">
-                        {{ $modul->nama_modul }}
-                    </a>
-                </td>
-                <td class="px-6 py-4 lowercase">
-                    {{ $modul->filePath_modul }}
-                </td>
-            </tr>
-        @endforeach
-
-    </div>
-</div>
+            @forelse ($moduls_11 as $modul)
+            {{-- CARD MODUL --}}
+            <article class="relative shadow-md max-w-lg w-full pt-4 transform duration-100 hover:-translate-y-2 cursor-pointer rounded-xl border-solid border-2 border-sky-400 hover:bg-sky-400 hover:text-white">
+                <div class="bg-no-repeat bg-center overflow-hidden min-h-96 flex flex-col items-center justify-center">
+                    <img class="w-[300px]" src="{{ asset('storage/images/'.$modul->foto_modul_11) }}" alt="Beasiswa Image"/>
+                </div>
+                <div class="p-6 text-center">
+                    <h4 class="block mb-2 font-sans text-xl md:text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                        {{ $modul->judul_modul_11 }}
+                    </h4>
+                </div>
+                <div class="p-6 pt-0 text-center">
+                    <h5>
+                        <a class="text-blue-600" href="{{ $modul->link_modul_11 }}" target="_blank">
+                            Lihat Modul
+                        </a>
+                    </h5>
+                </div>
+            </article>
+            @empty
+                <div class="bg-white dark:bg-gray-100 dark:border-gray-700 w-full">
+                    <div colspan="2"
+                        class="px-6 py-4 font-medium text-gray-900 dark:text-gray-800 whitespace-nowrap">
+                        {{ __('Info referensi link beasiswa belum ada -_-') }}
+                    </div>
+                </div>
+            @endforelse
+        </section>
+    </section>
+</x-guest-layout>

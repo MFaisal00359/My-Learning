@@ -13,9 +13,7 @@
                     </a>
                 </li>
                 <li class="block p-1 font-sans text-md font-normal leading-normal text-inherit antialiased">
-                    <a class="hover:underline hover:text-blue-700" href="{{ url('/modul-page') }}">
-                        Modul Belajar
-                    </a>
+                    <a class="hover:underline hover:text-blue-700" href="{{ url('/moduls_page') }}">moduls</a>
                 </li>
                 <li class="block p-1 font-sans text-md font-normal leading-normal text-inherit antialiased">
                     <a class="hover:underline hover:text-blue-700" href="{{ url('/beasiswa-page') }}">
@@ -55,7 +53,7 @@
                     </a>
                 </li>
                 <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
-                    <a class="hover:underline hover:text-blue-700" href="{{ url('/modul-page') }}">
+                    <a class="hover:underline hover:text-blue-700" href="{{ url('/moduls_page') }}">
                         Modul Belajar
                     </a>
                 </li>

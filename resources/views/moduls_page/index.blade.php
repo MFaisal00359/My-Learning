@@ -13,7 +13,7 @@
                     </a>
                 </li>
                 <li class="block p-1 font-sans text-md font-normal leading-normal text-inherit antialiased">
-                    <a class="hover:underline hover:text-blue-700" href="{{ url('/modul-page') }}">
+                    <a class="hover:underline hover:text-blue-700" href="{{ url('/moduls_page') }}">
                         Modul Belajar
                     </a>
                 </li>
@@ -55,7 +55,7 @@
                     </a>
                 </li>
                 <li class="block p-1 font-sans text-sm font-normal leading-normal text-inherit antialiased">
-                    <a class="hover:underline hover:text-blue-700" href="{{ url('/modul-page') }}">
+                    <a class="hover:underline hover:text-blue-700" href="{{ url('/moduls_page') }}">
                         Modul Belajar
                     </a>
                 </li>
@@ -74,55 +74,60 @@
         </div>
     </nav>
 
-    <section class="relative container mx-auto p-4 sm:py-20 px-0 md:p-10 md:px-0 bg-white selection:bg-red-500 selection:text-white bottom-0">
-        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-            {{-- CREATE MODULS --}}
-            @if(isset($moduls) && count($moduls) > 0)
-                <table class="w-full text-sm text-left rtl:text-right">
-                    <thead class="text-xs text-white uppercase bg-slate-800">
-                        <tr>
-                            <th scope="col" class="px-6 py-6">
-                                Nama Modul
-                            </th>
-                            <th scope="col" class="px-6 py-6">
-                                File Modul
-                            </th>
-                            <th scope="col" class="px-6 py-6">
-                                Aksi
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @forelse ($moduls as $modul)
-                            <tr class="bg-white border-b hover:bg-gray-50">
-                                <th class="px-6 py-4 text-gray-800 whitespace-nowrap">
-                                    {{ $modul->nama_modul }}
-                                </th>
-                                <th class="px-6 py-4 lowercase ">
-                                    {{ $modul->file_modul }}
-                                </th>
-                                <th class="py-4 whitespace-nowrap">
-                                    {{-- BUTTON DOWNLOAD --}}
-                                    <a href="{{ route('modul-page.download', $modul->file_modul) }}" class="text-blue-500 hover:underline">Download</a>
-                                </th>
-                            </tr>
-                        @empty
-                            <tr class="bg-white dark:bg-gray-100 dark:border-gray-700 w-full">
-                                <th colspan="3" class="px-6 py-4 font-medium text-gray-900 dark:text-gray-800 whitespace-nowrap">
-                                    {{ __('Info modul pembelajaran belum ada -_-') }}
-                                </th>
-                            </tr>
-                        @endforelse
-                    </tbody>
-                </table>
-            @else
-                <div class="bg-white dark:bg-gray-100 dark:border-gray-700 w-full">
-                    <div colspan="3" class="px-6 py-4 font-medium text-gray-900 dark:text-gray-800 whitespace-nowrap">
-                        {{ __('Info modul pembelajaran belum ada -_-') }}
-                    </div>
-                </div>
-            @endif
+    <section class="relative container mx-auto p-4 sm:py-20 px-0 md:p-10 md:px-0 bg-white selection:bg-red-500 selection:text-white">
+        {{-- SECTION CARDS --}}
+        <section class="p-5 md:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 items-start justify-items-center ">
 
-        </div>
+            {{-- CARD MODUL --}}
+            <article class="relative shadow-md max-w-lg w-full pt-4 transform duration-100 hover:-translate-y-2 cursor-pointer rounded-xl border-solid border-2 border-sky-400 hover:bg-sky-400 hover:text-white">
+                <div class="bg-no-repeat bg-center overflow-hidden min-h-96 flex items-center justify-center">
+                    <img class="w-[300px] rounded-xl" src="{{ url('assets/images/png-modul-pembelajaran.png') }}" alt="modul-pembelajaran" layout="fill"/>
+                </div>
+                <div class="p-6 text-center">
+                    <h5 class="block mb-2 font-sans text-xl md:text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                        KELAS 10
+                    </h5>
+                </div>
+                <div class="p-6 pt-0 text-center">
+                    <x-link-to href="{{ url('/moduls_page/modul_11_page') }}">
+                        Modul
+                    </x-link-to>
+                </div>
+            </article>
+
+            {{-- CARD INFORMASI BEASISWA --}}
+            <article class="relative shadow-md max-w-lg w-full pt-4 transform duration-100 hover:-translate-y-2 cursor-pointer rounded-xl border-solid border-2 border-yellow-400 hover:bg-yellow-400 hover:text-white">
+                <div class="bg-no-repeat bg-center overflow-hidden min-h-96 flex items-center justify-center">
+                    <img class="w-[300px] rounded-xl" src="{{ url('assets/images/png-info-beasiswa.png') }}" alt="info-beasiswa" layout="fill"/>
+                </div>
+                <div class="p-6 text-center">
+                    <h5 class="block mb-2 font-sans text-xl md:text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                        KELAS 11
+                    </h5>
+                </div>
+                <div class="p-6 pt-0 text-center">
+                    <x-link-to href="{{ url('/moduls_page/modul_11_page') }}">
+                        Modul
+                    </x-link-to>
+                </div>
+            </article>
+
+            {{-- CARD LAYANAN KONSELING --}}
+            <article class="relative shadow-md max-w-lg w-full pt-4 transform duration-100 hover:-translate-y-2 cursor-pointer rounded-xl border-solid border-2 border-red-400 hover:bg-red-400 hover:text-white">
+                <div class="bg-no-repeat bg-center overflow-hidden min-h-96 flex items-center justify-center">
+                    <img class="w-[300px] rounded-xl" src="{{ url('/assets/images/png-konseling.png') }}" alt="png-konseling" layout="fill"/>
+                </div>
+                <div class="p-6 text-center">
+                    <h5 class="block mb-2 font-sans text-xl md:text-2xl font-semibold tracking-normal text-blue-gray-900">
+                        KELAS 12
+                    </h5>
+                </div>
+                <div class="p-6 pt-0 text-center">
+                    <x-link-to href="{{ url('/moduls_page/modul_11_page') }}">
+                        Modul
+                    </x-link-to>
+                </div>
+            </article>
+        </section>
     </section>
 </x-guest-layout>

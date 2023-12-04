@@ -22,9 +22,9 @@ class StoreModulRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nama_modul' => 'required|max:200|min:5',
-            'deskripsi_modul' => 'required|max:200|min:5',
-            'file_modul' => 'required|mimes:pdf,doc,docx|max:2048',
+            'nama_modul_10' => 'required|max:200|min:5',
+            'foto_modul_10' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'link_modul_10' => 'required',
         ];
     }
 }

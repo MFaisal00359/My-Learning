@@ -4,14 +4,14 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateModulRequest extends FormRequest
+class UpdateModul_11Request extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      */
     public function authorize(): bool
     {
-        return true;
+        return false;
     }
 
     /**
@@ -22,9 +22,7 @@ class UpdateModulRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nama_modul' => 'required|max:200|min:5',
-            'deskripsi_modul' => 'required|max:200|min:5',
-            'file_modul' => 'required|mimes:pdf,doc,docx|max:2048',
+            //
         ];
     }
 }

@@ -37,7 +37,7 @@
                                 {{ $modul->nama_modul }}
                             </th>
                             <th class="px-6 py-4 lowercase ">
-                                {{ $modul->filePath_modul }}
+                                {{ $modul->file_modul }}
                             </th>
                             @can('manage access')
                             <th class="py-4 whitespace-nowrap">

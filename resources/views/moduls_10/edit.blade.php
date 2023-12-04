@@ -26,8 +26,8 @@
                         </div>
 
                         <div class="mb-4">
-                            <x-label for="filePath_modul" value="{{ __('Edit File Modul') }}" />
-                            <x-input id="filePath_modul" class="block mt-1 w-full" type="text" name="filePath_modul" :value="$modul->filePath_modul" required autofocus autocomplete="file_path" />
+                            <x-label for="file_modul" value="{{ __('Edit File Modul') }}" />
+                            <x-input id="file_modul" class="block mt-1 w-full" type="text" name="file_modul" :value="$modul->file_modul" required autofocus autocomplete="file_path" />
                         </div>
 
                         <div class="flex mt-4">

@@ -99,11 +99,11 @@
                                     {{ $modul->nama_modul }}
                                 </th>
                                 <th class="px-6 py-4 lowercase ">
-                                    {{ $modul->filePath_modul }}
+                                    {{ $modul->file_modul }}
                                 </th>
                                 <th class="py-4 whitespace-nowrap">
                                     {{-- BUTTON DOWNLOAD --}}
-                                    <a href="{{ route('modul-page.showFile', $modul) }}" class="text-blue-500 hover:underline">Download</a>
+                                    <a href="{{ route('modul-page.download', $modul->file_modul) }}" class="text-blue-500 hover:underline">Download</a>
                                 </th>
                             </tr>
                         @empty

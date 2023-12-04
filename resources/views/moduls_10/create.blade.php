@@ -29,14 +29,14 @@
                         </div>
 
                         <div class="mb-4">
-                            <x-label for="filePath_modul" class="mb-2" value="{{ __('File Modul') }}" />
-                            <x-input id="filePath_modul" class="block w-full text-sm text-slate-500
+                            <x-label for="file_modul" class="mb-2" value="{{ __('File Modul') }}" />
+                            <x-input id="file_modul" class="block w-full text-sm text-slate-500
                             file:mr-4 file:py-2 file:px-4
                             file:rounded file:border-0
                             file:text-sm file:font-semibold
                             file:bg-violet-50 file:text-violet-700
-                            hover:file:bg-violet-100" type="file" name="filePath_modul" :value="old('filePath_modul')" required autofocus autocomplete="filePath_modul" />
-                            <x-input-error for="filePath_modul" class="mt-2"/>
+                            hover:file:bg-violet-100" type="file" name="file_modul" :value="old('file_modul')" required autofocus autocomplete="file_modul" />
+                            <x-input-error for="file_modul" class="mt-2"/>
                         </div>
 
                         <div class="flex mt-6">

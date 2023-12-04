@@ -14,4 +14,6 @@ class Beasiswa_link extends Model
         'foto_beasiswa',
         'link_beasiswa',
     ];
+
+    public $timestamps = true;
 }

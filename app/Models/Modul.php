@@ -12,6 +12,8 @@ class Modul extends Model
     protected $fillable = [
         'nama_modul',
         'deskripsi_modul',
-        'filePath_modul',
+        'file_modul',
     ];
+
+    public $timestamps = true;
 }

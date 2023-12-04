@@ -1,30 +1,27 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Link Beasiswa') }}
+            {{ __('Link Test Kepribadian') }}
         </h2>
     </x-slot>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            {{-- Board beasiswa_links List --}}
+            {{-- Board konseling_links List --}}
             @can('manage access')
-                <x-link href="{{ route('beasiswa_links.create') }}" class="mb-6 mx-4 sm:mx-0">Upload Beasiswa Baru</x-link>
+                <x-link href="{{ route('konseling_links.create') }}" class="mb-6 mx-4 sm:mx-0">Upload Link Tes Baru</x-link>
             @endcan
 
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-                {{-- CREATE beasiswa_links --}}
+                {{-- CREATE konselink_links --}}
                 <table class="w-full text-sm text-left rtl:text-right">
                     <thead class="text-xs text-white uppercase bg-slate-800">
                         <tr>
                             <th scope="col" class="px-6 py-6">
-                                Nama Beasiswa
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                Foto Beasiswa
+                                Nama Tes
                             </th>
                             <th scope="col" class="px-6 py-6">
-                                Link Beasiswa
+                                Link Tes
                             </th>
                             @can('manage access')
                             <th scope="col" class="px-6 py-3">
@@ -34,24 +31,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                    @forelse ($beasiswa_links as $beasiswa_link)
+                    @forelse ($konseling_links as $konseling_link)
                         <tr class="bg-white border-b hover:bg-gray-50">
                             <td class="px-6 py-4 font-medium text-gray-800 whitespace-nowrap">
-                                {{ $beasiswa_link->nama_beasiswa }}
+                                {{ $konseling_link->nama_tes }}
                             </td>
                             <td class="px-6 py-4">
-                                <img class="w-[84px]" src="{{ asset('storage/images/'.$beasiswa_link->foto_beasiswa) }}" alt="Beasiswa Image"/>
-                            </td>
-                            <td class="px-6 py-4">
-                                {{ $beasiswa_link->link_beasiswa }}
+                                {{ $konseling_link->link_tes }}
                             </td>
                             @can('manage access')
                             <td class="py-4 whitespace-nowrap">
                                 {{-- BUTTON EDIT --}}
-                                <x-link-add href="{{ route('beasiswa_links.edit', $beasiswa_link) }}">Edit</x-link-add>
+                                <x-link-add href="{{ route('konseling_links.edit', $konseling_link) }}">Edit</x-link-add>
 
                                 {{-- BUTTON DELETE --}}
-                                <form method="POST" action="{{ route('beasiswa_links.destroy', $beasiswa_link) }}" class="inline-block">
+                                <form method="POST" action="{{ route('konseling_links.destroy', $konseling_link) }}" class="inline-block">
                                     @csrf
                                     @method('DELETE')
                                     <x-danger-button
@@ -65,14 +59,14 @@
                         <tr class="bg-white dark:bg-gray-100 dark:border-gray-700">
                             <td colspan="2"
                                 class="px-6 py-4 font-medium text-gray-900 dark:text-gray-800 whitespace-nowrap">
-                                {{ __('Beasiswa belum ada -_-') }}
+                                {{ __('Link Konseling belum ada -_-') }}
                             </td>
                         </tr>
                     @endforelse
                     </tbody>
                 </table>
                 <button class="m-4">
-                    {{ $beasiswa_links }}
+                    {{ $konseling_links }}
                 </button>
             </div>
             </div>

@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('konseling_links', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_tes');
+            $table->string('link_tes');
             $table->timestamps();
         });
     }

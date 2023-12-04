@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             {{-- Board Moduls List --}}
             @can('manage access')
-                <x-link href="{{ route('moduls.create') }}" class="mb-6 mx-4 sm:mx-0">Tambahkan Modul</x-link>
+                <x-link href="{{ route('moduls.create') }}" class="mb-6 mx-4 sm:mx-0">Upload Modul</x-link>
             @endcan
 
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -52,6 +52,8 @@
                                         type="submit"
                                         onclick="return confirm('Yakin Ingin Menghapus?')">Delete</x-danger-button>
                                 </form>
+
+                                <x-link-add href="{{ route('moduls.show', $modul) }}">Show</x-link-add>
                             </th>
                             @endcan
                         </tr>
@@ -59,12 +61,15 @@
                         <tr class="bg-white dark:bg-gray-100 dark:border-gray-700 w-full">
                             <th colspan="2"
                                 class="px-6 py-4 font-medium text-gray-900 dark:text-gray-800 whitespace-nowrap">
-                                {{ __('Modul pembalajaran tidak ada 😢') }}
+                                {{ __('Modul pembalajaran belum ada -_-') }}
                             </th>
                         </tr>
                     @endforelse
                     </tbody>
                 </table>
+                <button class="m-4">
+                    {{ $moduls }}
+                </button>
             </div>
         </div>
     </div>

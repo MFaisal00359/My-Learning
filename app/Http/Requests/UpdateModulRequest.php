@@ -24,7 +24,7 @@ class UpdateModulRequest extends FormRequest
         return [
             'nama_modul' => 'required',
             'deskripsi_modul' => 'required',
-            'filePath_modul' => 'required',
+            'file_modul' => 'required',
         ];
     }
 }

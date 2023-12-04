@@ -11,7 +11,7 @@
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg px-4 py-4">
                     <x-validation-errors class="mb-4" />
                     <x-link-back href="{{ route('beasiswa_links.index') }}" class="mb-4">Kembali Ke Tabel Beasiswa</x-link-back>
-                    <form method="POST" action="{{ route('beasiswa_links.update', $beasiswa_link) }}">
+                    <form method="POST" action="{{ route('beasiswa_links.update', $beasiswa_link) }}" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
 
@@ -21,8 +21,13 @@
                         </div>
 
                         <div class="mb-4">
-                            <x-label for="foto_beasiswa" value="{{ __('Edit Foto Beasiswa ') }}" />
-                            <x-input id="foto_beasiswa" class="block mt-1 w-full" type="text" name="foto_beasiswa" :value="$beasiswa_link->foto_beasiswa" required autofocus autocomplete="foto_beasiswa" />
+                            <x-label for="foto_beasiswa" class="mb-2" value="{{ __('Foto Beasiswa') }}" />
+                            <x-input id="foto_beasiswa" class="form-control block w-full text-sm text-slate-500
+                            file:mr-4 file:py-2 file:px-4
+                            file:rounded file:border-0
+                            file:text-sm file:font-semibold
+                            file:bg-violet-50 file:text-violet-700
+                            hover:file:bg-violet-100" type="file" name="foto_beasiswa" :value="$beasiswa_link->foto_beasiswa" required autofocus autocomplete="foto_beasiswa" />
                         </div>
 
                         <div class="mb-4">

@@ -13,7 +13,7 @@
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg px-4 py-4">
                     <x-validation-errors class="mb-4" />
                     <x-link-back href="{{ route('moduls.index') }}" class="mb-4">Kembali Ke Modul</x-link-back>
-                    <form method="POST" action="{{ route('moduls.store') }}">
+                    <form method="POST" action="{{ route('moduls.store') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="mb-4">
@@ -29,12 +29,17 @@
                         </div>
 
                         <div class="mb-4">
-                            <x-label for="filePath_modul" value="{{ __('File Modul') }}" />
-                            <x-input id="filePath_modul" class="block mt-1 w-full" type="text" name="filePath_modul" :value="old('filePath_modul')" required autofocus autocomplete="filePath_modul" />
+                            <x-label for="filePath_modul" class="mb-2" value="{{ __('File Modul') }}" />
+                            <x-input id="filePath_modul" class="block w-full text-sm text-slate-500
+                            file:mr-4 file:py-2 file:px-4
+                            file:rounded file:border-0
+                            file:text-sm file:font-semibold
+                            file:bg-violet-50 file:text-violet-700
+                            hover:file:bg-violet-100" type="file" name="filePath_modul" :value="old('filePath_modul')" required autofocus autocomplete="filePath_modul" />
                             <x-input-error for="filePath_modul" class="mt-2"/>
                         </div>
 
-                        <div class="flex mt-4">
+                        <div class="flex mt-6">
                             <x-button-save>
                                 {{ __('Tambahkan Modul') }}
                             </x-button-save>

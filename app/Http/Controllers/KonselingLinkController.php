@@ -13,7 +13,11 @@ class KonselingLinkController extends Controller
      */
     public function index()
     {
-        //
+        $konseling_links = Konseling_link::all();
+
+        $konseling_links = Konseling_link::simplePaginate(5);
+
+        return view('konseling_links.index', compact('konseling_links'));
     }
 
     /**
@@ -21,7 +25,9 @@ class KonselingLinkController extends Controller
      */
     public function create()
     {
-        //
+        $this->authorize('manage access');
+
+        return view('konseling_links.create');
     }
 
     /**
@@ -29,7 +35,11 @@ class KonselingLinkController extends Controller
      */
     public function store(StoreKonseling_linkRequest $request)
     {
-        //
+        $this->authorize('manage access');
+
+        Konseling_link::create($request->validated());
+
+        return redirect()->route('konseling_links.index');
     }
 
     /**
@@ -45,7 +55,9 @@ class KonselingLinkController extends Controller
      */
     public function edit(Konseling_link $konseling_link)
     {
-        //
+        $this->authorize('manage access');
+
+        return view('konseling_links.edit', compact('konseling_link'));
     }
 
     /**
@@ -53,7 +65,11 @@ class KonselingLinkController extends Controller
      */
     public function update(UpdateKonseling_linkRequest $request, Konseling_link $konseling_link)
     {
-        //
+        $this->authorize('manage access');
+
+        $konseling_link->update($request->validated());
+
+        return redirect()->route('konseling_links.index');
     }
 
     /**
@@ -61,6 +77,10 @@ class KonselingLinkController extends Controller
      */
     public function destroy(Konseling_link $konseling_link)
     {
-        //
+        $this->authorize('manage access');
+
+        $konseling_link->delete();
+
+        return redirect()->route('konseling_links.index');
     }
 }

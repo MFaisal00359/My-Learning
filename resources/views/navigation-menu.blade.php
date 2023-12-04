@@ -21,6 +21,9 @@
                     <x-nav-link href="{{ route('beasiswa_links.index') }}" :active="request()->routeIs('beasiswa_links.*')">
                         {{ __('Beasiswa') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('konseling_links.index') }}" :active="request()->routeIs('konseling_links.*')">
+                        {{ __('Konseling') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -120,8 +123,7 @@
                             <form method="POST" action="{{ route('logout') }}" x-data>
                                 @csrf
 
-                                <x-dropdown-link href="{{ route('logout') }}"
-                                         @click.prevent="$root.submit();">
+                                <x-dropdown-link href="{{ route('logout') }}" @click.prevent="$root.submit();">
                                     {{ __('Log Out') }}
                                 </x-dropdown-link>
                             </form>
@@ -155,6 +157,10 @@
 
             <x-responsive-nav-link href="{{ route('beasiswa_links.index') }}" :active="request()->routeIs('beasiswa_links.*')">
                 {{ __('Beasiswa') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link href="{{ route('konseling_links.index') }}" :active="request()->routeIs('konseling_links.*')">
+                {{ __('Konseling') }}
             </x-responsive-nav-link>
         </div>
 

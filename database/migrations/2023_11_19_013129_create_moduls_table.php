@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama_modul');
             $table->string('deskripsi_modul');
-            $table->string('filePath_modul');
+            $table->string('file_modul');
             $table->timestamps();
         });
     }

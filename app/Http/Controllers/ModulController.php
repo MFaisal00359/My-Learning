@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Modul;
 use App\Http\Requests\StoreModulRequest;
 use App\Http\Requests\UpdateModulRequest;
+use Illuminate\Support\Facades\Storage; // Import facades Storage
 
 class ModulController extends Controller
 {
@@ -14,6 +15,8 @@ class ModulController extends Controller
     public function index()
     {
         $moduls = Modul::all();
+
+        $moduls = Modul::simplePaginate(5);
 
         return view('moduls.index', compact('moduls'));
     }
@@ -35,9 +38,19 @@ class ModulController extends Controller
     {
         $this->authorize('manage access');
 
-        Modul::create($request->validated());
+        if ($request->hasFile('file_modul')) {
+            $destination_path = 'public/documents/';
+            $document = $request->file('file_modul');
+            $documentName = time() . '_' . $document->getClientOriginalName();
+            $document->storeAs($destination_path, $documentName);
+        }
 
-        return redirect()->route('moduls.index');
+        Beasiswa_link::create(array_merge($request->validated(), ['file_modul' => $documentName]));
+
+        return redirect()->route('beasiswa_links.index')->with([
+            'message' => 'Document added successfully!',
+            'status' => 'success'
+        ]);
     }
 
     /**
@@ -45,7 +58,10 @@ class ModulController extends Controller
      */
     public function show(Modul $modul)
     {
-        //
+        // $this->authorize('manage access');
+
+        return view('moduls.show', compact('modul'));
+        // return view('modul-page', compact('modul'));
     }
 
     /**
@@ -65,7 +81,19 @@ class ModulController extends Controller
     {
         $this->authorize('manage access');
 
-        $modul->update($request->validated());
+        $validatedData = $request->validated();
+
+        // Update file in storage
+        if ($request->hasFile('file')) {
+            // Delete the old file before updating
+            Storage::disk('public')->delete($modul->file_path);
+
+            $file = $request->file('file');
+            $path = $file->store('modul_files', 'public');
+            $validatedData['file_path'] = $path;
+        }
+
+        $modul->update($validatedData);
 
         return redirect()->route('moduls.index');
     }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Beasiswa_link;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\StoreBeasiswa_linkRequest;
 use App\Http\Requests\UpdateBeasiswa_linkRequest;
 
@@ -14,6 +15,8 @@ class BeasiswaLinkController extends Controller
     public function index()
     {
         $beasiswa_links = Beasiswa_link::all();
+
+        $beasiswa_links = Beasiswa_link::simplePaginate(5);
 
         return view('beasiswa_links.index', compact('beasiswa_links'));
     }
@@ -35,10 +38,21 @@ class BeasiswaLinkController extends Controller
     {
         $this->authorize('manage access');
 
-        Beasiswa_link::create($request->validated());
+        if ($request->hasFile('foto_beasiswa')) {
+            $destination_path = 'public/images/';
+            $image = $request->file('foto_beasiswa');
+            $imageName = time() . '_' . $image->getClientOriginalName();
+            $image->storeAs($destination_path, $imageName);
+        }
 
-        return redirect()->route('beasiswa_links.index');
+        Beasiswa_link::create(array_merge($request->validated(), ['foto_beasiswa' => $imageName]));
+
+        return redirect()->route('beasiswa_links.index')->with([
+            'message' => 'User added successfully!',
+            'status' => 'success'
+        ]);
     }
+
 
     /**
      * Display the specified resource.
@@ -65,9 +79,20 @@ class BeasiswaLinkController extends Controller
     {
         $this->authorize('manage access');
 
-        $beasiswa_link->update($request->validated());
+        if ($request->hasFile('foto_beasiswa')) {
+            // Delete the old image
+            Storage::delete('public/images/' . $beasiswa_link->foto_beasiswa);
 
-        return redirect()->route('beasiswa_links.index');
+            // Save the new image
+            $destination_path = 'public/images';
+            $image = $request->file('foto_beasiswa');
+            $imageName = time() . '_' . $image->getClientOriginalName();
+            $image->storeAs($destination_path, $imageName);
+        }
+
+        $beasiswa_link->update(array_merge($request->validated(), ['foto_beasiswa' => $imageName]));
+
+        return redirect()->route('beasiswa_links.index')->with('success', 'Post image berhasil diupdate!');
     }
 
     /**
@@ -77,6 +102,10 @@ class BeasiswaLinkController extends Controller
     {
         $this->authorize('manage access');
 
+        // Delete the associated image file
+        Storage::delete('public/images/' . $beasiswa_link->foto_beasiswa);
+
+        // Delete the Beasiswa_link record
         $beasiswa_link->delete();
 
         return redirect()->route('beasiswa_links.index');

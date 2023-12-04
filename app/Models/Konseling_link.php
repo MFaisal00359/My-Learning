@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Konseling_link extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'nama_tes',
+        'link_tes',
+    ];
+
+    public $timestamps = true;
 }

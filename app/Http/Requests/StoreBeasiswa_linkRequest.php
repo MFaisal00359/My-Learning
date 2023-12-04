@@ -22,8 +22,8 @@ class StoreBeasiswa_linkRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nama_beasiswa' => 'required',
-            'foto_beasiswa' => 'required',
+            'nama_beasiswa' => 'required|max:200|min:5',
+            'foto_beasiswa' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'link_beasiswa' => 'required',
         ];
     }

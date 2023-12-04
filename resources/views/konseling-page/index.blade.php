@@ -73,84 +73,31 @@
         </div>
     </nav>
 
-    <section class="container hidden md:block mx-auto p-10 px-0 md:px-0 h-max bg-white selection:bg-red-500 selection:text-white">
-        <div class="bg-cover bg-no-repeat bg-center w-full flex items-center justify-center">
-            <img class="rounded-2xl" src="{{ url('assets/images/png-banner.png') }}" alt="image description">
-        </div>
-    </section>
-
     <section class="relative container mx-auto p-4 sm:py-20 px-0 md:p-10 md:px-0 bg-white selection:bg-red-500 selection:text-white">
         {{-- SECTION CARDS --}}
-        <section class="p-5 md:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 items-start justify-items-center ">
+        <section class="p-5 md:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 place-content-center place-items-right">
 
+            @forelse ($konseling_links as $konseling_link)
             {{-- CARD MODUL --}}
             <article class="relative shadow-md max-w-lg w-full pt-4 transform duration-100 hover:-translate-y-2 cursor-pointer rounded-xl border-solid border-2 border-sky-400 hover:bg-sky-400 hover:text-white">
-                <div class="bg-no-repeat bg-center overflow-hidden min-h-96 flex items-center justify-center">
+                <div class="bg-no-repeat bg-center overflow-hidden min-h-96 flex flex-col items-center justify-center">
                     <img class="w-[300px] rounded-xl" src="{{ url('assets/images/png-modul-pembelajaran.png') }}" alt="modul-pembelajaran" layout="fill"/>
+                    {{ $konseling_link->foto_beasiswa }}
                 </div>
                 <div class="p-6 text-center">
                     <h5 class="block mb-2 font-sans text-xl md:text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-                        Modul Pembelajaran
+                        {{ $konseling_link->nama_tes }}
                     </h5>
                 </div>
-                <div class="p-6 pt-0 text-center">
-                    <x-link-to href="{{ url('/modul-page') }}">
-                        Modul
-                    </x-link-to>
-                </div>
             </article>
-
-            {{-- CARD INFORMASI BEASISWA --}}
-            <article class="relative shadow-md max-w-lg w-full pt-4 transform duration-100 hover:-translate-y-2 cursor-pointer rounded-xl border-solid border-2 border-yellow-400 hover:bg-yellow-400 hover:text-white">
-                <div class="bg-no-repeat bg-center overflow-hidden min-h-96 flex items-center justify-center">
-                    <img class="w-[300px] rounded-xl" src="{{ url('assets/images/png-info-beasiswa.png') }}" alt="info-beasiswa" layout="fill"/>
+            @empty
+                <div class="bg-white dark:bg-gray-100 dark:border-gray-700 w-full">
+                    <div colspan="2"
+                        class="px-6 py-4 font-medium text-gray-900 dark:text-gray-800 whitespace-nowrap">
+                        {{ __('Info referensi link test belum ada -_-') }}
+                    </div>
                 </div>
-                <div class="p-6 text-center">
-                    <h5 class="block mb-2 font-sans text-xl md:text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-                        Informasi Beasiswa
-                    </h5>
-                </div>
-                <div class="p-6 pt-0 text-center">
-                    <x-link-to href="{{ url('/beasiswa-page') }}">
-                        Beasiswa
-                    </x-link-to>
-                </div>
-            </article>
-
-            {{-- CARD LAYANAN KONSELING --}}
-            <article class="relative shadow-md max-w-lg w-full pt-4 transform duration-100 hover:-translate-y-2 cursor-pointer rounded-xl border-solid border-2 border-red-400 hover:bg-red-400 hover:text-white">
-                <div class="bg-no-repeat bg-center overflow-hidden min-h-96 flex items-center justify-center">
-                    <img class="w-[300px] rounded-xl" src="{{ url('/assets/images/png-konseling.png') }}" alt="png-konseling" layout="fill"/>
-                </div>
-                <div class="p-6 text-center">
-                    <h5 class="block mb-2 font-sans text-xl md:text-2xl font-semibold tracking-normal text-blue-gray-900">
-                        Layanan Konseling
-                    </h5>
-                </div>
-                <div class="p-6 pt-0 text-center">
-                    <x-link-to href="{{ url('beasiswa-page') }}">
-                        Konseling
-                    </x-link-to>
-                </div>
-            </article>
+            @endforelse
         </section>
     </section>
-
-    <footer class="flex w-full flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 border-t border-blue-gray-50 py-6 px-4 sm:px-12 md:24 lg:32 text-center md:justify-between bottom-0">
-        <p class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
-            © 2023 Made with ❤ by Rorojonggrang Team | IF'21 ITERA
-        </p>
-        <ul class="flex flex-wrap items-center gap-y-2 gap-x-8">
-            <li>
-                <a href="#" class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased transition-colors hover:text-pink-500 focus:text-pink-500">
-                Contribute
-                </a>
-            </li>
-            <li>
-                <a href="#" class="block font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased transition-colors hover:text-pink-500 focus:text-pink-500">
-                Contact Us
-                </a>
-            </li>
-        </ul>
-    </footer>
 </x-guest-layout>

@@ -80,7 +80,7 @@ class Modul10Controller extends Controller
 
         if ($request->hasFile('foto_modul_10')) {
             // Delete the old image
-            Storage::delete('public/images/' . $modul_10->foto_modul_11);
+            Storage::delete('public/images/' . $modul_10->foto_modul_10);
 
             // Save the new image
             $destination_path = 'public/images';
@@ -89,9 +89,9 @@ class Modul10Controller extends Controller
             $image->storeAs($destination_path, $imageName);
         }
 
-        $modul_11->update(array_merge($request->validated(), ['foto_modul_10' => $imageName]));
+        $modul_10->update(array_merge($request->validated(), ['foto_modul_10' => $imageName]));
 
-        return redirect()->route('moduls.modul_11.index')->with([
+        return redirect()->route('moduls.modul_10.index')->with([
             'message' => 'User added successfully!',
             'status' => 'success'
         ]);
@@ -105,10 +105,10 @@ class Modul10Controller extends Controller
         $this->authorize('manage access');
 
         // Delete the associated image file
-        Storage::delete('public/images/' . $modul_11->foto_modul_10);
+        Storage::delete('public/images/' . $modul_10->foto_modul_10);
 
         // Delete the moduls_10 record
-        $modul_11->delete();
+        $modul_10->delete();
 
         return redirect()->route('moduls.modul_10.index');
     }

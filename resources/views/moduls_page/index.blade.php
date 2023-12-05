@@ -85,7 +85,7 @@
                 </div>
                 <div class="p-6 text-center">
                     <h5 class="block mb-2 font-sans text-sm md:text-2xl font-semibold tracking-normal text-blue-gray-900">
-                            KELAS 11
+                            KELAS 10
                     </h5>
                 </div>
                 <div class="p-6 pt-0 text-center">
@@ -95,7 +95,7 @@
 
                         <!-- text -->
                         <div class="relative text-white bottom-1 text-sm font-thin leading-none tracking-wider py-2 px-4 bg-blue-500 rounded-md transform hover:translate-y-1 transition duration-200 ease-in-out">
-                            <a href="{{ url('/moduls_page/modul_11_page') }}">
+                            <a href="{{ url('/moduls_page/modul_10_page') }}">
                                 Lihat Kelas →
                             </a>
                         </div>
@@ -143,7 +143,7 @@
 
                         <!-- text -->
                         <div class="relative text-white bottom-1 text-sm font-thin leading-none tracking-wider py-2 px-4 bg-blue-500 rounded-md transform hover:translate-y-1 transition duration-200 ease-in-out">
-                            <a href="{{ url('/moduls_page/modul_11_page') }}">
+                            <a href="{{ url('/moduls_page/modul_12_page') }}">
                                 Lihat Kelas →
                             </a>
                         </div>

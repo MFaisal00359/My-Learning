@@ -2,23 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Modul_11;
+use App\Models\Modul_12;
 use Illuminate\Support\Facades\Storage;
-use App\Http\Requests\StoreModul_11Request;
-use App\Http\Requests\UpdateModul_11Request;
+use App\Http\Requests\StoreModul_12Request;
+use App\Http\Requests\UpdateModul_12Request;
 
-class Modul11Controller extends Controller
+class Modul12Controller extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $moduls_11 = Modul_11::all();
+        $moduls_12 = Modul_12::all();
 
-        $moduls_11 = Modul_11::simplePaginate(5);
+        $moduls_12 = Modul_12::simplePaginate(5);
 
-        return view('moduls.modul_11.index', compact('moduls_11'));
+        return view('moduls.modul_12.index', compact('moduls_12'));
     }
 
     /**
@@ -28,26 +28,26 @@ class Modul11Controller extends Controller
     {
         $this->authorize('manage access');
 
-        return view('moduls.modul_11.create');
+        return view('moduls.modul_12.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreModul_11Request $request)
+    public function store(StoreModul_12Request $request)
     {
         $this->authorize('manage access');
 
-        if ($request->hasFile('foto_modul_11')) {
+        if ($request->hasFile('foto_modul_12')) {
             $destination_path = 'public/images/';
-            $image = $request->file('foto_modul_11');
+            $image = $request->file('foto_modul_12');
             $imageName = time() . '_' . $image->getClientOriginalName();
             $image->storeAs($destination_path, $imageName);
         }
 
-        Modul_11::create(array_merge($request->validated(), ['foto_modul_11' => $imageName]));
+        Modul_12::create(array_merge($request->validated(), ['foto_modul_12' => $imageName]));
 
-        return redirect()->route('moduls.modul_11.index')->with([
+        return redirect()->route('moduls.modul_12.index')->with([
             'message' => 'User added successfully!',
             'status' => 'success'
         ]);
@@ -56,7 +56,7 @@ class Modul11Controller extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Modul_11 $modul_11)
+    public function show(Modul_12 $modul_12)
     {
         //
     }
@@ -64,34 +64,34 @@ class Modul11Controller extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Modul_11 $modul_11)
+    public function edit(Modul_12 $modul_12)
     {
         $this->authorize('manage access');
 
-        return view('moduls.modul_11.edit', compact('modul_11'));
+        return view('moduls.modul_12.edit', compact('modul_12'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateModul_11Request $request, Modul_11 $modul_11)
+    public function update(UpdateModul_12Request $request, Modul_12 $modul_12)
     {
         $this->authorize('manage access');
 
-        if ($request->hasFile('foto_modul_11')) {
+        if ($request->hasFile('foto_modul_12')) {
             // Delete the old image
-            Storage::delete('public/images/' . $modul_11->foto_modul_11);
+            Storage::delete('public/images/' . $modul_12->foto_modul_12);
 
             // Save the new image
             $destination_path = 'public/images';
-            $image = $request->file('foto_modul_11');
+            $image = $request->file('foto_modul_12');
             $imageName = time() . '_' . $image->getClientOriginalName();
             $image->storeAs($destination_path, $imageName);
         }
 
-        $modul_11->update(array_merge($request->validated(), ['foto_modul_11' => $imageName]));
+        $modul_12->update(array_merge($request->validated(), ['foto_modul_12' => $imageName]));
 
-        return redirect()->route('modul_11.index')->with([
+        return redirect()->route('moduls.modul_12.index')->with([
             'message' => 'User added successfully!',
             'status' => 'success'
         ]);
@@ -100,16 +100,16 @@ class Modul11Controller extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Modul_11 $modul_11)
+    public function destroy(Modul_12 $modul_12)
     {
         $this->authorize('manage access');
 
         // Delete the associated image file
-        Storage::delete('public/images/' . $modul_11->foto_modul_11);
+        Storage::delete('public/images/' . $modul_12->foto_modul_12);
 
-        // Delete the moduls_11 record
-        $modul_11->delete();
+        // Delete the moduls_12 record
+        $modul_12->delete();
 
-        return redirect()->route('moduls.modul_11.index');
+        return redirect()->route('moduls.modul_12.index');
     }
 }

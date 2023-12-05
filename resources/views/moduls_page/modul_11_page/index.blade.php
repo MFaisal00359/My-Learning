@@ -82,7 +82,7 @@
             {{-- CARD MODUL --}}
             <article class="relative shadow-md cursor-pointer border-solid border-2 border-gray-400 ">
                 <div class="bg-no-repeat bg-center overflow-hidden min-h-96 flex flex-col items-center justify-center">
-                    <img class="w-full" src="{{ asset('storage/images/'.$modul->foto_modul_11) }}" alt="Beasiswa Image"/>
+                    <img class="w-full" src="{{ asset('storage/images/'.$modul->foto_modul_11) }}" alt="Modul Kelas 10"/>
                 </div>
                 <div class="p-6 text-center">
                     <h4 class="block mb-2 font-sans text-sm md:text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">

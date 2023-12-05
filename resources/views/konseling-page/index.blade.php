@@ -73,7 +73,7 @@
         </div>
     </nav>
 
-    <section class="relative container mx-auto p-4 sm:py-20 px-0 md:p-10 md:px-0 bg-white selection:bg-red-500 selection:text-white">
+    <section class="relative container mx-auto p-4 sm:py-20 px-0 md:p-10 md:px-0 selection:bg-red-500 selection:text-white">
         {{-- SECTION CARDS --}}
         <section class="p-5 md:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 place-content-center place-items-right">
 

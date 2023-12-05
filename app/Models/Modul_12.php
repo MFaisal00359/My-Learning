@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Modul extends Model
+class Modul_12 extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'nama_modul_10',
-        'foto_modul_10',
-        'link_modul_10',
+        'judul_modul_12',
+        'foto_modul_12',
+        'link_modul_12',
     ];
 
     public $timestamps = true;

@@ -12,31 +12,31 @@
 
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg px-4 py-4">
                     <x-validation-errors class="mb-4" />
-                    <x-link-back href="{{ route('moduls.modul_11.index') }}" class="mb-4">Kembali Ke Modul</x-link-back>
-                    <form method="POST" action="{{ route('modul_11.store') }}" enctype="multipart/form-data">
+                    <x-link-back href="{{ route('moduls.modul_10.index') }}" class="mb-4">Kembali Ke Modul</x-link-back>
+                    <form method="POST" action="{{ route('modul_10.store') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="mb-4">
-                            <x-label for="judul_modul_11" value="{{ __('Judul Modul') }}" />
-                            <x-input id="judul_modul_11" class="block mt-1 w-full" type="text" name="judul_modul_11" :value="old('judul_modul_11')" required autofocus autocomplete="judul_modul_11" />
-                            <x-input-error for="judul_modul_11" class="mt-2"/>
+                            <x-label for="judul_modul_10" value="{{ __('Judul Modul') }}" />
+                            <x-input id="judul_modul_10" class="block mt-1 w-full" type="text" name="judul_modul_10" :value="old('judul_modul_10')" required autofocus autocomplete="judul_modul_10" />
+                            <x-input-error for="judul_modul_10" class="mt-2"/>
                         </div>
 
                         <div class="mb-4">
-                            <x-label for="foto_modul_11" class="mb-2" value="{{ __('Cover Buku Modul') }}" />
-                            <x-input id="foto_modul_11" class="form-control block w-full text-sm text-slate-500
+                            <x-label for="foto_modul_10" class="mb-2" value="{{ __('Cover Buku Modul') }}" />
+                            <x-input id="foto_modul_10" class="form-control block w-full text-sm text-slate-500
                             file:mr-4 file:py-2 file:px-4
                             file:rounded file:border-0
                             file:text-sm file:font-semibold
                             file:bg-violet-50 file:text-violet-700
-                            hover:file:bg-violet-100" type="file" name="foto_modul_11" :value="old('foto_modul_11')" required autofocus autocomplete="foto_modul_11" />
-                            <x-input-error for="foto_modul_11" class="mt-2"/>
+                            hover:file:bg-violet-100" type="file" name="foto_modul_10" :value="old('foto_modul_10')" required autofocus autocomplete="foto_modul_10" />
+                            <x-input-error for="foto_modul_10" class="mt-2"/>
                         </div>
 
                         <div class="mb-4">
-                            <x-label for="link_modul_11" value="{{ __('Link Modul') }}" />
-                            <x-input id="link_modul_11" class="block mt-1 w-full" type="text" name="link_modul_11" required autofocus autocomplete="link_modul_11" />
-                            <x-input-error for="link_modul_11" class="mt-2"/>
+                            <x-label for="link_modul_10" value="{{ __('Link Modul') }}" />
+                            <x-input id="link_modul_10" class="block mt-1 w-full" type="text" name="link_modul_10" required autofocus autocomplete="link_modul_10" />
+                            <x-input-error for="link_modul_10" class="mt-2"/>
                         </div>
 
                         <div class="flex mt-6">

@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             {{-- Board Moduls List --}}
             @can('manage access')
-                <x-link href="{{ route('moduls.modul_11.create') }}" class="mb-6 mx-4 sm:mx-0">Upload Modul</x-link>
+                <x-link href="{{ route('moduls.modul_12.create') }}" class="mb-6 mx-4 sm:mx-0">Upload Modul</x-link>
             @endcan
 
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -34,25 +34,25 @@
                         </tr>
                     </thead>
                     <tbody>
-                    @forelse ($moduls_11 as $modul)
+                    @forelse ($moduls_12 as $modul)
                         <tr class="bg-white border-b hover:bg-gray-50">
                             <th class="px-6 py-4 lowercase ">
-                                <img class="w-[84px]" src="{{ asset('storage/images/'.$modul->foto_modul_11) }}" alt="Beasiswa Image"/>
+                                <img class="w-[84px]" src="{{ asset('storage/images/'.$modul->foto_modul_12) }}" alt="Beasiswa Image"/>
                             </th>
                             <th class="px-6 py-4 text-gray-800 whitespace-nowrap">
-                                {{ $modul->judul_modul_11 }}
+                                {{ $modul->judul_modul_12 }}
                             </th>
                             <th class="px-6 py-4 lowercase ">
 
-                                <a class="text-blue-600" href="{{ $modul->link_modul_11 }}">{{ $modul->link_modul_11 }}</a>
+                                <a class="text-blue-600" href="{{ $modul->link_modul_12 }}">{{ $modul->link_modul_12 }}</a>
                             </th>
                             @can('manage access')
                             <th class="py-4 whitespace-nowrap">
                                 {{-- BUTTON EDIT --}}
-                                <x-link-add href="{{ route('moduls.modul_11.edit', $modul) }}">Edit</x-link-add>
+                                <x-link-add href="{{ route('moduls.modul_12.edit', $modul) }}">Edit</x-link-add>
 
                                 {{-- BUTTON DELETE --}}
-                                <form method="POST" action="{{ route('moduls.modul_11.destroy', $modul) }}" class="inline-block">
+                                <form method="POST" action="{{ route('moduls.modul_12.destroy', $modul) }}" class="inline-block">
                                     @csrf
                                     @method('DELETE')
                                     <x-danger-button
@@ -73,7 +73,7 @@
                     </tbody>
                 </table>
                 <button class="m-4">
-                    {{ $moduls_11 }}
+                    {{ $moduls_12 }}
                 </button>
             </div>
         </div>

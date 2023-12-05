@@ -25,7 +25,7 @@
 
                             <!-- text -->
                             <div class="relative text-white bottom-1 text-sm font-thin leading-none tracking-wider py-2 px-4 bg-blue-500 rounded-md transform hover:translate-y-1 transition duration-200 ease-in-out">
-                                <a href="{{ route('moduls.modul_11.index') }}">
+                                <a href="{{ route('moduls.modul_10.index') }}">
                                     Detail Kelas →
                                 </a>
                             </div>
@@ -40,7 +40,7 @@
                     </div>
                     <div class="p-6 text-center">
                         <h5 class="block mb-2 font-sans text-sm md:text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-                            KELAS 10
+                            KELAS 11
                         </h5>
                     </div>
                     <div class="p-6 pt-0 text-center">
@@ -64,7 +64,7 @@
                     </div>
                     <div class="p-6 text-center">
                         <h5 class="block mb-2 font-sans text-sm md:text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-                            KELAS 10
+                            KELAS 12
                         </h5>
                     </div>
                     <div class="p-6 pt-0 text-center">
@@ -74,7 +74,7 @@
 
                             <!-- text -->
                             <div class="relative text-white bottom-1 text-sm font-thin leading-none tracking-wider py-2 px-4 bg-blue-500 rounded-md transform hover:translate-y-1 transition duration-200 ease-in-out">
-                                <a href="{{ route('moduls.modul_11.index') }}">
+                                <a href="{{ route('moduls.modul_12.index') }}">
                                     Detail Kelas →
                                 </a>
                             </div>

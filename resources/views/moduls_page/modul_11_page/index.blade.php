@@ -74,27 +74,33 @@
         </div>
     </nav>
 
-    <section class="relative container mx-auto p-4 sm:py-20 px-0 md:p-10 md:px-0 bg-white selection:bg-red-500 selection:text-white">
+    <section class="relative container mx-auto p-4 sm:py-20 px-0 md:p-10 md:px-0 selection:bg-red-500 selection:text-white">
         {{-- SECTION CARDS --}}
-        <section class="p-5 md:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 place-content-center place-items-right">
+        <section class="p-5 md:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 place-content-between place-items-right">
 
             @forelse ($moduls_11 as $modul)
             {{-- CARD MODUL --}}
-            <article class="relative shadow-md max-w-lg w-full pt-4 transform duration-100 hover:-translate-y-2 cursor-pointer rounded-xl border-solid border-2 border-sky-400 hover:bg-sky-400 hover:text-white">
+            <article class="relative shadow-md cursor-pointer border-solid border-2 border-gray-400 ">
                 <div class="bg-no-repeat bg-center overflow-hidden min-h-96 flex flex-col items-center justify-center">
-                    <img class="w-[300px]" src="{{ asset('storage/images/'.$modul->foto_modul_11) }}" alt="Beasiswa Image"/>
+                    <img class="w-full" src="{{ asset('storage/images/'.$modul->foto_modul_11) }}" alt="Beasiswa Image"/>
                 </div>
                 <div class="p-6 text-center">
-                    <h4 class="block mb-2 font-sans text-xl md:text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                    <h4 class="block mb-2 font-sans text-sm md:text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                         {{ $modul->judul_modul_11 }}
                     </h4>
                 </div>
                 <div class="p-6 pt-0 text-center">
-                    <h5>
-                        <a class="text-blue-600" href="{{ $modul->link_modul_11 }}" target="_blank">
-                            Lihat Modul
-                        </a>
-                    </h5>
+                    <button class="inline-block text-center border-b-4 w-[32px] cursor-pointer">
+                        <!-- black background shadow -->
+                        <div class="absolute inset-x-12 bottom-4 bg-orange-700 border rounded-md" />
+
+                        <!-- text -->
+                        <div class="relative text-white bottom-1 text-sm font-thin leading-none tracking-wider py-2 px-4 bg-orange-500 rounded-md transform hover:translate-y-1 transition duration-200 ease-in-out">
+                            <a class="text-white"  href="{{ $modul->link_modul_11 }}" target="_blank">
+                                Lihat Modul →
+                            </a>
+                        </div>
+                    </button>
                 </div>
             </article>
             @empty

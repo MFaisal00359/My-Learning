@@ -29,6 +29,8 @@ Route::get('/moduls_page', function () {
 
 Route::get('moduls_page/modul_11_page', [PostModul11Controller::class, 'index'])->name('modul_11_page');
 
+Route::get('moduls_page/modul_10_page', [PostModul11Controller::class, 'index'])->name('modul_10_page');
+
 Route::get('/beasiswa-page', [PostBeasiswaController::class, 'index'])->name('beasiswa-page');
 // Route::get('/beasiswa-page/{nama_beasiswa}', [PostModulController::class, 'show'])->name('beasiswa-page.show');
 
@@ -55,6 +57,16 @@ Route::middleware([
             'show' => 'moduls.modul_11.show',
             'edit' => 'moduls.modul_11.edit',
             'destroy' => 'moduls.modul_11.destroy',
+        ]);
+    });
+
+    Route::group(['prefix' => 'moduls'], function () {
+        Route::resource('modul_10', \App\Http\Controllers\Modul10Controller::class)->names([
+            'index' => 'moduls.modul_10.index',
+            'create' => 'moduls.modul_10.create',
+            'show' => 'moduls.modul_10.show',
+            'edit' => 'moduls.modul_10.edit',
+            'destroy' => 'moduls.modul_10.destroy',
         ]);
     });
 

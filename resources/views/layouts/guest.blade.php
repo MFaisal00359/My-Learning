@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'MyLearning') }}</title>
+        <title>{{ config('app.name', 'My-Learning') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -17,8 +17,8 @@
         <!-- Styles -->
         @livewireStyles
     </head>
-    <body>
-        <div class="font-sans text-gray-900 antialiased">
+    <body class="bg-[#fffaeb]">
+        <div class="font-sans text-gray-900 bg-[#fffaeb] antialiased">
             {{ $slot }}
         </div>
 

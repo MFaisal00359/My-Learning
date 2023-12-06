@@ -58,11 +58,6 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
    ```bash
    php artisan migrate
    ```
-   
-   defenisiin admin role ke db nya 
-   ```bash
-   php artisan db:seed --class=AdminUserSeeder
-   ```
 
    coba jalankan
    ```bash

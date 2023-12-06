@@ -33,11 +33,7 @@ Sebelum memulai proyek, pastikan memiliki persyaratan berikut untuk diinstal di 
    ```bash
    cp .env.example .env
    ```
-   Install Composer
-   ```bash
-   composer install
-   ```
-
+   
    Install npm
    ```bash
    npm install

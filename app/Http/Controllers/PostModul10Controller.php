@@ -6,7 +6,7 @@ use App\Models\Modul_10;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
-class PostModul11Controller extends Controller
+class PostModul10Controller extends Controller
 {
     public function index(): View
     {
